@@ -1,4 +1,13 @@
-# 7zip_exec
-Example (add Oracle folder to test1.7z (all at current dir))
+## Dockerized 7zip
 
-docker run -it --rm -v $(pwd):/pwd -w /pwd izotoff/7zip a test1 Oracle
+
+### Examples
+
+Add Oracle folder to test1.7z:
+
+    docker run -it --rm -v $(pwd):/pwd -w /pwd hraban/7zip 7zip a test1 Oracle
+
+Use tar to preserve UNIX permissions and ownership:
+
+    docker run -ti --rm -v "$PWD:/pwd" -w /pwd hraban/7zip bash -c 'tar c Oracle | 7zip a -si test1.tar.7z'
+
