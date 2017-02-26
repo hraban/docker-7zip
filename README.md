@@ -5,7 +5,7 @@
 
 Add Oracle folder to test1.7z:
 
-    docker run -it --rm -v $(pwd):/pwd -w /pwd luyat/7zip 7zip a test1 Oracle
+    docker run -it --rm -v $(pwd):/pwd -w /pwd luyat/7zip 7z a test1 Oracle
 
 Use tar to preserve UNIX permissions and ownership:
 
